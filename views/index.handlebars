@@ -1,0 +1,51 @@
+<div id="background">
+    <div class="row">
+        <div class="col s12 center custom-img">
+            <img src="/assets/img/burger.jpg" alt="Burger" class="img-responsive" height="300px" width="auto" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12">
+            <h1 class="center header-font white-text">Eat Bob's Burger</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row custom-row">
+        <div class="col s6">
+            <h3 class="center header-font">UnEaten Burgers</h3>
+            <div class="collection">
+                {{#each burgers}} {{#unless devoured}}
+                <a href="#!" class="devour collection-item custom-font" data-id="{{id}}" data-nowdevoured="{{devoured}}">{{burger_name}}</a> {{/unless}} {{/each}}
+            </div>
+        </div>
+
+        <div class="col s6">
+            <h3 class="center header-font">Burgers Devoured</h3>
+            <div class="collection">
+                {{#each burgers}} {{#if devoured}}
+                <a href="#!" class="delete collection-item custom-font" data-id="{{id}}">{{burger_name}}</a>
+                {{/if}} {{/each}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col offset-s3 s6 center">
+                    <i class="material-icons prefix">mode_edit</i>
+                    <textarea id="icon_prefix" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix">Burger</label>
+                    <button class="btn waves-effect waves-light z-depth-3" type="submit" name="action" id="submit">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                    <p class="flow-text white-text red center z-depth-5" id="validate">Please enter the name of the burger before you submit</p>
+                    <p class="flow-text center custom-btn-font">Enter a burger you are craving then hit sumbit</p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

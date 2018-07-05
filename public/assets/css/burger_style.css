@@ -1,0 +1,29 @@
+.header-font {
+    font-family: 'fantasy', cursive;
+}
+
+.custom-font {
+    font-family: 'fantasy', fantasy;    
+}
+
+#background {
+    background-color: rgb(161, 59, 76);
+    height: 550px;
+}
+
+.custom-img {
+    margin: 5% 0;
+}
+
+#validate {
+    display: none;
+}
+
+.custom-btn-font {
+    font-size: 145%;
+}
+
+.custom-row {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
